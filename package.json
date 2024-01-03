@@ -1,9 +1,11 @@
 {
   "name": " Project-Infrastructure ",
   "packageManager": "yarn@3.2.3",
-  "description": "",
-  "version": "1.0.0",
   "main": "index.js",
+"description": "",
+  "engines": {
+    "node": "16.13.2"
+  },
   "scripts": {
     "build": "tsc",
     "go": "nodemon src/index.ts",
