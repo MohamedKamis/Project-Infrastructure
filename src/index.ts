@@ -6,9 +6,7 @@ const port = 8080;
 app.use(express.json());
 
 app.get('/', async (_req, res) => {
-  res.send("
- hello world ....
-");
+  res.send(" hello world ...." );
 });
 app.listen(port, () => {
   console.log(`Your server starting on --> http://localhost:${port}?id=`);
