@@ -1,4 +1,5 @@
 import express from 'express';
+import twilio,(accountSid,authToken) from  'twilio';
 
 const app = express();
 const port = 8080;
@@ -9,9 +10,9 @@ app.get('/', async (_req, res) => {
 
 const accountSid = 'ACd3dda004c0771fac63823bd8899e71ea';
 const authToken = '13847b05aea79467da4bae307d70417d';
-const client = require('twilio')(accountSid, authToken);
 
-client.messages
+
+twilio.messages
   .create({
     body: 'Hello from Node.js!',
     from: 'whatsapp:+201558554755', // This is your Twilio sandbox number
