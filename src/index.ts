@@ -1,5 +1,5 @@
 import express from 'express';
-import twilio, {accountSid,authToken} from  'twilio';
+import * as twilio from 'twilio';
 
 const app = express();
 const port = 8080;
