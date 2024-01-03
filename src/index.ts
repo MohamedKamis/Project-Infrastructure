@@ -7,18 +7,7 @@ app.use(express.json());
 
 app.get('/', async (_req, res) => {
   res.send("
-const accountSid = 'YOUR_TWILIO_ACCOUNT_SID';
-const authToken = 'YOUR_TWILIO_AUTH_TOKEN';
-const client = require('twilio')(accountSid, authToken);
-
-client.messages
-  .create({
-    body: 'Hello from Node.js!',
-    from: 'whatsapp:+14155238886', // This is your Twilio sandbox number
-    to: 'whatsapp:+1234567890' // This is the recipient's number
-  })
-  .then(message => console.log(message.sid))
-  .catch(error => console.log(error));
+ hello world ....
 ");
 });
 app.listen(port, () => {
