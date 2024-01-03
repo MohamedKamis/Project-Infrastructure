@@ -8,8 +8,10 @@ app.use(express.json());
 
 app.get('/', async (_req, res) => {
 
-const accountSid = 'ACd3dda004c0771fac63823bd8899e71ea';
-const authToken = '13847b05aea79467da4bae307d70417d';
+const accountSid ='123'; 
+// 'ACd3dda004c0771fac63823bd8899e71ea';
+const authToken ='123';
+// '13847b05aea79467da4bae307d70417d';
      const client = twilio(accountSid, authToken);
 
 const messageOptions: twilio.messages.CreateMessageOptions = {
