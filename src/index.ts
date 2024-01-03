@@ -1,5 +1,5 @@
 import express from 'express';
-import * as twilio from 'twilio';
+import twilio from 'twilio';
 
 const app = express();
 const port = 8080;
