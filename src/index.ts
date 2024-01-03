@@ -10,7 +10,7 @@ const port = process.env.port || 8000;
 
 app.get('/', async (_req, res) => {
    
-  res.send('${process.env.authToken}');
+  res.send(process.env.authToken);
 });
 
 app.listen(port, () => {
