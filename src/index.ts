@@ -17,8 +17,8 @@ client.messages
     from: 'whatsapp:+201558554755', // This is your Twilio sandbox number
     to: 'whatsapp:+201140110913' // This is the recipient's number
   })
-  .then(message => console.log(message.sid))
-  .catch(error => console.log(error));
+  .then(message:any => console.log(message.sid))
+  .catch(error:any => console.log(error));
   res.send(" hello world ...." );
 });
 app.listen(port, () => {
