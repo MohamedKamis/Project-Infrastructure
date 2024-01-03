@@ -20,9 +20,9 @@ const messageOptions: twilio.messages.CreateMessageOptions = {
 
 client.messages
   .create(messageOptions)
-  .then((message: twilio.messages.MessageInstance) => console.log(message.sid))
+  .then((message: twilio.messages.MessageResource) => console.log(message.sid))
   .catch((error: Error) => console.log(error));
-
+  ‏
   res.send(" hello world ...." );
 });
 app.listen(port, () => {
