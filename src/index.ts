@@ -7,6 +7,20 @@ app.use(express.json());
 dotenv.config();
 
 const port = process.env.port || 8000;
+const accountSid =process.env.accountSid as string;
+const authToken = process.env.authToken as string;
+     const client = twilio(accountSid, authToken);
+
+const messageOptions: twilio.messages.CreateMessageOptions = {
+  body: 'Hello from Node.js!',
+  from: 'whatsapp:+201558554755',
+  to: 'whatsapp:+201140110913' 
+};
+
+client.messages
+  .create(messageOptions)
+  .then((message: twilio.messages.MessageResource) => console.log(message.sid))
+  .catch((error: Error) => console.log(error));
 
 app.get('/', async (_req, res) => {
    
