@@ -1,15 +1,9 @@
 import express from 'express';
 import * as twilio from 'twilio';
-
 const app = express();
 const port = 8080;
-
 app.use(express.json());
-
 app.get('/', async (_req, res) => {
-
-
-  ‏
   res.send(" hello world ...." );
 });
 app.listen(port, () => {
